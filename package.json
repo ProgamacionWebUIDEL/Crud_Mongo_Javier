@@ -1,0 +1,22 @@
+{
+  "name": "crud_mongo_javier",
+  "version": "1.0.0",
+  "description": "Es un proyecto de Crud en mongo desarrollado por Javier de la UIDE",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgamacionWebUIDEL/Crud_Mongo_Javier.git"
+  },
+  "author": "ijayorah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ProgamacionWebUIDEL/Crud_Mongo_Javier/issues"
+  },
+  "homepage": "https://github.com/ProgamacionWebUIDEL/Crud_Mongo_Javier#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
