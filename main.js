@@ -1,5 +1,10 @@
-const express=require("express");
-const app=express();
+const express = require("express");
+const app = express();
+const index_pelicula = require("./Router/ruta_Pelicula");
+const connection = require("./Config/conexion");
+//Ruteo de APIS
+
+app.use('/',index_pelicula);
 
 
 app.get("/Hola",(req,res)=>{
