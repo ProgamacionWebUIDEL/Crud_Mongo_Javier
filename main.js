@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const index_pelicula = require("./Router/ruta_Pelicula");
+const index_pelicula = require("./Router/ruta_Series");
 const connection = require("./Config/conexion");
 const bodyParser = require("body-parser");
 
