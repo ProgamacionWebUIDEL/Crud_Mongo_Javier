@@ -4,9 +4,11 @@ const index_pelicula = require("./Router/ruta_Pelicula");
 const index_serie = require("./Router/ruta_Series");
 const connection = require("./Config/conexion");
 const bodyParser = require("body-parser");
+const cors=require('cors');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(cors());
 
 
 //Ruteo de APIS
