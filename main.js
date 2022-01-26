@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const index_pelicula = require("./Router/ruta_Pelicula");
-const index_pelicula = require("./Router/ruta_Series");
+const index_serie = require("./Router/ruta_Series");
 const connection = require("./Config/conexion");
 const bodyParser = require("body-parser");
 
@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 //Ruteo de APIS
 
 app.use('/',index_pelicula);
+app.use('/',index_serie);
+
 
 
 app.get("/Hola",(req,res)=>{
@@ -56,6 +58,6 @@ app.get("/Calcular_Edad",(req,res)=>{
 });
 
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT || 8000,()=>{
     console.log("Servidor Iniciado")
 });
