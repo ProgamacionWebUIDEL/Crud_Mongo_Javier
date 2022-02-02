@@ -3,7 +3,7 @@ Schema=mongoose.Schema;
 
 var peliculaSchema = new mongoose.Schema({
     nombre:{type:String},
-    direccot:{type:String},
+    director:{type:String},
     anio_estreno:{type:Number},
     idioma:{type:String}
 });
