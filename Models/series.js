@@ -7,7 +7,8 @@ var serieSchema = new mongoose.Schema({
     anio_estreno:{type:Number},
     idioma:{type:String},
     categoria:{type:String},
-    temporadas:{type:String}
+    temporadas:{type:String},
+    informacion:{type:String}
 });
 
 var serie = mongoose.model('serie',serieSchema);

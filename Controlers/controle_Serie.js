@@ -20,7 +20,8 @@ router.post('/crearSerie',(req,res)=>{
         anio_estreno: body.anio_estreno,
         idioma: body.idioma,
         categoria: body.categoria,
-        temporadas: body.temporadas
+        temporadas: body.temporadas,
+        informacion: body.informacion
     }, (err,rest)=>{
         if(err){
             console.log(err);
