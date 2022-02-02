@@ -16,7 +16,7 @@ router.post('/crearSerie',(req,res)=>{
     var body = req.body;
     serie.insertMany({
         nombre: body.nombre,
-        director: body.direccot,
+        director: body.director,
         anio_estreno: body.anio_estreno,
         idioma: body.idioma,
         categoria: body.categoria,
