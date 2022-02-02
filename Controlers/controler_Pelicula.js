@@ -16,7 +16,7 @@ router.post('/crearPelicula',(req,res)=>{
     var body = req.body;
     pelicula.insertMany({
         nombre: body.nombre,
-        direccot: body.direccot,
+        director: body.direccot,
         anio_estreno: body.anio_estreno,
         idioma: body.idioma
     }, (err,rest)=>{
