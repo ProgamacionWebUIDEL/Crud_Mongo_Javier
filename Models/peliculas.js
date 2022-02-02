@@ -5,7 +5,8 @@ var peliculaSchema = new mongoose.Schema({
     nombre:{type:String},
     director:{type:String},
     anio_estreno:{type:Number},
-    idioma:{type:String}
+    idioma:{type:String},
+    informacion:{type:String}
 });
 
 var pelicula = mongoose.model('pelicula',peliculaSchema);

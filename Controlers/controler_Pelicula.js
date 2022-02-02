@@ -18,7 +18,8 @@ router.post('/crearPelicula',(req,res)=>{
         nombre: body.nombre,
         director: body.director,
         anio_estreno: body.anio_estreno,
-        idioma: body.idioma
+        idioma: body.idioma,
+        informacion: body.informacion
     }, (err,rest)=>{
         if(err){
             console.log(err);
