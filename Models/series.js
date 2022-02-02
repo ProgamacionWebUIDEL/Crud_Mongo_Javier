@@ -4,7 +4,7 @@ Schema=mongoose.Schema;
 var serieSchema = new mongoose.Schema({
     nombre:{type:String},
     director:{type:String},
-    anio_estreno:{type:Number},
+    anio_estreno:{type:Date},
     idioma:{type:String},
     categoria:{type:String},
     temporadas:{type:String},
