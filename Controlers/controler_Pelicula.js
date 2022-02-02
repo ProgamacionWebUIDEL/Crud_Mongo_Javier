@@ -2,9 +2,9 @@ var pelicula = require('../Models/peliculas'),
     express = require('express'),
     router = express.Router();
 
-router.post('/',(req,res)=>{
-    pelicula.find({},(err,docs)=>{
-        if(err){
+router.post('/', (req, res) => {
+    pelicula.find({}, (err, docs) => {
+        if (err) {
             console.log(err);
             throw err;
         }
@@ -12,7 +12,7 @@ router.post('/',(req,res)=>{
     });
 });
 
-router.post('/crearPelicula',(req,res)=>{
+router.post('/crearPelicula', (req, res) => {
     var body = req.body;
     pelicula.insertMany({
         nombre: body.nombre,
@@ -20,8 +20,8 @@ router.post('/crearPelicula',(req,res)=>{
         anio_estreno: body.anio_estreno,
         idioma: body.idioma,
         informacion: body.informacion
-    }, (err,rest)=>{
-        if(err){
+    }, (err, rest) => {
+        if (err) {
             console.log(err);
             throw err;
         }
@@ -29,11 +29,11 @@ router.post('/crearPelicula',(req,res)=>{
     });
 });
 
-router.post('/eliminarPelicula',(req,res)=>{
+router.post('/eliminarPelicula', (req, res) => {
     pelicula.remove({
         nombre: req.body.nombre
-    }, (err,rest)=>{
-        if(err){
+    }, (err, rest) => {
+        if (err) {
             console.log(err);
             throw err;
         }
@@ -41,25 +41,25 @@ router.post('/eliminarPelicula',(req,res)=>{
     });
 });
 
-router.post('/editarPelicula',(req,res)=>{
+router.post('/editarPelicula', (req, res) => {
     var body = req.body;
     pelicula.updateMany({
         nombre: body.nombre
-    },{
-        $set:{
+    }, {
+        $set: {
             nombre: body.nombre,
             director: body.director,
             anio_estreno: body.anio_estreno,
             idioma: body.idioma
         }
-    },(err,rest)=>{
-        if(err){
+    }, (err, rest) => {
+        if (err) {
             console.log(err);
             throw err;
         }
         res.status(200).json(rest)
     });
-    
+
 });
 
 module.exports = router;
